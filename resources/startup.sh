@@ -52,7 +52,8 @@ function Get_Lets_Encrypt_Certificates {
 
 	rm /etc/nginx/conf.d/registry.conf
 	cp /etc/nginx/temp/registry-lets-encrypt.conf /etc/nginx/conf.d/registry.conf
-
+	
+	mkdir -p /etc/nginx/ssl
 	cp /etc/letsencrypt/live/${ROOT_COMMON_NAME}/fullchain.pem /etc/letsencrypt/live/${ROOT_COMMON_NAME}/privkey.pem /etc/nginx/ssl/
 }
 
