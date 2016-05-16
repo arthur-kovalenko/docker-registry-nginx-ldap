@@ -1,7 +1,7 @@
 nginx:
   container_name: registry-proxy
-  image: arturskovalenko/registry-nginx-ldap-proxy:0.1
-  # build: .
+  # image: arturskovalenko/registry-nginx-ldap-proxy:0.1
+  build: .
   ports:
     - 5043:443
   net: ${CUSTOM_NETWORK_NAME}
@@ -24,8 +24,6 @@ nginx:
 registry:
   container_name: registry
   image: registry:2
-  # Alternative is to use "secure" adop-docker-registry image with self-signed certificates
-  # image: adop-docker-registry:0.1
   net: ${CUSTOM_NETWORK_NAME}
   ports:
     - 127.0.0.1:5500:5000

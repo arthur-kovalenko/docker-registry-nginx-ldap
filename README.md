@@ -1,6 +1,8 @@
 # docker-registry
 
-Docker registry with Nginx authentification with LDAP and self-signed SSL certificates. This registry is intended to be used on ADOP stack. For more information regarding ADOP, please see https://github.com/Accenture/adop-docker-compose
+Docker registry with Nginx authentification with LDAP and Lets Encrypt SSL certificates. This registry is intended to be used on ADOP stack. For more information regarding ADOP, please see https://github.com/Accenture/adop-docker-compose
+
+Do NOT use self-signed SSL certificates with docker registry. It is possible to use them, but you will need to either copy them to any machine that will authenticate with your private registry, or provide an --insecure-registry flag to docker deamon. If you are running a docker registry on localhost, and and planning to push and pull images only from the same local machine, you do NOT need to use any certificates, and plain, "Vanilla" registry will work fine as well.
 
 ## Usage instructions
 
