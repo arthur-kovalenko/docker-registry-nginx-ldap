@@ -19,6 +19,7 @@ nginx:
     - "LDAP_GROUP_ATTRIBUTE=member"
     - "LDAP_USER_ID_ATTRIBUTE=cn"
     - "LDAP_USER_OBJECT_CLASS=inetOrgPerson"
+    - "USE_LETS_ENCRYPT=true"
 
 registry:
   container_name: registry

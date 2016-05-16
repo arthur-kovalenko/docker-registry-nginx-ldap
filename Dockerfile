@@ -53,7 +53,9 @@ ENV EMAIL example@example.com
 
 # Copy configuration files
 COPY ./resources/nginx/conf.d/registry.conf /etc/nginx/conf.d/registry.conf
-COPY ./resources/nginx/nginx.conf /etc/nginx/temp/nginx.conf 
+COPY ./resources/nginx/nginx.conf /etc/nginx/temp/nginx.conf
+COPY ./resources/nginx/registry-lets-encrypt.conf /etc/nginx/temp/registry-lets-encrypt.conf
+COPY ./resources/openssl.cnf /etc/ssl/openssl.cnf
 # COPY ./resources/nginx/registry.password /etc/nginx/conf.d/registry.password
 COPY ./resources/startup.sh /bin/startup.sh
 
